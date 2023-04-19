@@ -188,9 +188,6 @@ const Content = () => {
           <h1>Seahorse Poll App</h1>
           <h3>Vote for your favorite blockchain</h3>
           <h2>Ethereum: {votes.ethereum} | Solana: {votes.solana} | Polygon: {votes.polygon}</h2>
-          <button onClick={createPoll}>
-            Create Poll
-          </button>
           <button onClick={() => vote(0)}>
             Vote Ethereum
           </button>
