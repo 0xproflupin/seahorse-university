@@ -24,7 +24,7 @@ import idl from "./idl.json";
 // const programID = new PublicKey("DTWbi1MaDqinPBJF4JZ7mVHgFfoSeD51VruTG7ud41Ec");
 const programID = new PublicKey("C8ZXZXQuCKidMC1bjQduPjvSmkZqTBXukZbVxmGc9JAR");
 const network =
-  "https://rpc-devnet.helius.xyz/?api-key=d160b417-f4f1-4cee-8e46-3236310c6070";
+  "https://rpc-devnet.helius.xyz/?api-key=7f4fa7e5-09f2-4f01-a440-8938c172c52f";
 const opts = {
   preflightCommitment: "processed",
 };
