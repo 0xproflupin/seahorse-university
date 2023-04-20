@@ -1,6 +1,6 @@
 # poll
 
-https://seahorse-poll.vercel.app/
+https://poll.seahorse.university
 
 This project was created by Seahorse 0.2.4.
 

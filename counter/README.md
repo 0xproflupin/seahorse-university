@@ -1,6 +1,6 @@
 # counter
 
-https://seahorse-counter.vercel.app/
+https://counter.seahorse.university
 
 This project was created by Seahorse 0.2.4.
 
