@@ -10,9 +10,12 @@
   - [Accounts](./introduction-to-solana-core/accounts.md)
   - [Instructions and Transactions](./introduction-to-solana-core/instructions-and-transactions.md)
   - [Programs](./introduction-to-solana-core/programs.md)
-  - [SPL-tokens, NFTs and the Token Program](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/spl-tokens-nfts-and-token-program.md.md)
+  - [SPL-tokens, NFTs and the Token Program](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/spl-tokens-nfts-and-token-program.md)
     - [Token Program](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/token-program.md)
     - [Token Metadata Program](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/token-metadata-program.md)
     - [Fungible Tokens](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/fungible-token.md)
     - [Fungible Assets](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/fungible-asset.md)
     - [Non-Fungible Tokens](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/non-fungible-token.md)
+
+- [Getting Started with Seahorse](./getting-started-with-seahorse/getting-started-with-seahorse.md)
+  - [Poll Program](./getting-started-with-seahorse/poll-program.md)
