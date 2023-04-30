@@ -98,7 +98,6 @@ Each of the above will comprise of the following:
     - Initialise react app
     - Make frontend
     - Call program
-    - Testing: [https://beta.solpg.io/](https://beta.solpg.io/)
 
 ### Chapter 2: Diving deep into Seahorse Lang
 
