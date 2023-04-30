@@ -1,6 +1,6 @@
 # Summary
 
-- [Introduction to Seahorse University](./introduction-to-seahorse-university/introduction-to-seahorse-university.md)
+- [Introduction to Seahorse University](./introduction-to-seahorse-university/seahorse-university.md)
   - [Syllabus](./introduction-to-seahorse-university/syllabus.md)
   - [Goal](./introduction-to-seahorse-university/goal.md)
 
