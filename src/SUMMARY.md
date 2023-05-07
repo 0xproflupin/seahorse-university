@@ -4,6 +4,16 @@
   - [Syllabus](./introduction-to-seahorse-university/syllabus.md)
   - [Goal](./introduction-to-seahorse-university/goal.md)
 
+- [Getting Started with Seahorse](./getting-started-with-seahorse/getting-started-with-seahorse.md)
+  - [The Poll App](./getting-started-with-seahorse/the-poll-app/the-poll-app.md)
+  - [Poll Program](./getting-started-with-seahorse/the-poll-app/poll-program/poll-program.md)
+    - [Initializing the project](./getting-started-with-seahorse/the-poll-app/poll-program/initialize-project.md)
+    - [Add Accounts](./getting-started-with-seahorse/the-poll-app/poll-program/add-accounts.md)
+    - [Add Instructions](./getting-started-with-seahorse/the-poll-app/poll-program/add-instructions.md)
+  - [Testing with Anchor](./getting-started-with-seahorse/the-poll-app/testing-with-anchor/testing-with-anchor.md)
+    - [Solana Playground](./getting-started-with-seahorse/the-poll-app/testing-with-anchor/solana-playground.md)
+    - [Writing Tests](./getting-started-with-seahorse/the-poll-app/testing-with-anchor/writing-tests.md)
+
 - [Introduction to Solana Core](./introduction-to-solana-core/introduction-to-solana-core.md)
   - [Block Explorer](./introduction-to-solana-core/block-explorer.md)
   - [Blocks, Validators and Proof of History](./introduction-to-solana-core/blocks-validators-and-poh.md)
@@ -16,6 +26,3 @@
     - [Fungible Tokens](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/fungible-token.md)
     - [Fungible Assets](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/fungible-asset.md)
     - [Non-Fungible Tokens](./introduction-to-solana-core/spl-tokens-nfts-and-token-program/non-fungible-token.md)
-
-- [Getting Started with Seahorse](./getting-started-with-seahorse/getting-started-with-seahorse.md)
-  - [Poll Program](./getting-started-with-seahorse/poll-program.md)
