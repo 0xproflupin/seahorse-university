@@ -161,4 +161,32 @@ const txSolHash = await pg.program.methods
 ```
 
 - Here we are using `.methods` to access the instructions like before
-- `.vote()` is used with a `{sol: true}` object as a parameter. The `sol` here comes from the `VoteOperation` enum we defined in our program (Anchor turns the)
+- `.vote()` is used with a `{sol: true}` object as a parameter. `sol` comes from the `VoteOperation` enum we defined in our program.
+- We don't mention `signers` like in the case of creating a poll because the `newPoll` keypair was needed to initialise the account.
+
+This comprises of a vote for Solana. We do the same below that for Ethereum. After voting:
+```ts
+// Confirm transaction
+await pg.connection.confirmTransaction(txEthHash);
+
+// Fetch the poll account
+const pollAccount = await pg.program.account.poll.fetch(newPoll.publicKey);
+
+console.log("ethereum:", pollAccount.ethereum.toString());
+assert(pollAccount.ethereum.toString(), "1");
+
+console.log("solana:", pollAccount.solana.toString());
+assert(pollAccount.solana.toString(), "1");
+
+console.log("polygon:", pollAccount.polygon.toString());
+assert(pollAccount.polygon.toString(), "0");
+```
+
+- We first confirm the transaction which was signed and sent using `.rpc()` earlier.
+- We fetch the `poll` account using the `newPoll` pubkey
+- Once the `poll` account is fetched, we can access its data: `.solana`, `.ethereum` and `.polygon`. We however need to convert it to a string as its in the `BN` data type.
+- As we have voted once each for Solana and Ethereum, we do the assertions accordingly.
+
+This wraps up our first Anchor test. Not too bad, was it?
+
+Let's go to the third and final step of creating our Poll App: the frontend!
