@@ -104,7 +104,7 @@ assert(pollAccount.polygon.toString(), "0");
 - We finally do the assertions to check if the values are currently 0.
 
 ## Add Unit Test for Voting
-We will now add the second unit test for voting. Add the following code to the test suite:
+We will now add the unit testing for the vote intruction. Add the following code to the test suite:
 
 ```ts
 
@@ -147,3 +147,18 @@ it("vote", async () => {
 });
 
 ```
+
+Let's got through this step by step.
+
+```ts
+const txSolHash = await pg.program.methods
+    .vote({ sol: true })
+    .accounts({
+        poll: newPoll.publicKey,
+        user: pg.wallet.publicKey,
+    })
+    .rpc();
+```
+
+- Here we are using `.methods` to access the instructions like before
+- `.vote()` is used with a `{sol: true}` object as a parameter. The `sol` here comes from the `VoteOperation` enum we defined in our program (Anchor turns the)
