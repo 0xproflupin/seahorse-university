@@ -12,7 +12,7 @@
     - [Testing with Anchor](./getting-started-with-seahorse/poll-app/testing-with-anchor/testing-with-anchor.md)
       - [Solana Playground](./getting-started-with-seahorse/poll-app/testing-with-anchor/solana-playground.md)
       - [Writing Tests](./getting-started-with-seahorse/poll-app/testing-with-anchor/writing-tests.md)
-    - [Frontend](./getting-started-with-seahorse/poll-app/frontend/frontend.md)
+    - [Frontend](./getting-started-with-seahorse/poll-app/frontend.md)
 
 - [Introduction to Solana Core](./introduction-to-solana-core/introduction-to-solana-core.md)
   - [Block Explorer](./introduction-to-solana-core/block-explorer.md)
