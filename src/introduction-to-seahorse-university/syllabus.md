@@ -1,6 +1,16 @@
 # Syllabus
 
-## Chapter 0 [optional]: Introduction to Solana Core
+## Chapter 1: On-Hands Introduction to Seahorse Lang: Poll App
+The main focus of this Chapter will be to dive straight into the writing a Seahorse program without getting into the nitty-gritties of installing CLIs and dependancies. We will be using Solana Playground to write, test and publish our Seahorse Program. We will also write Anchor tests for our program and finally write a frontend in ReactJS.
+
+We will focus on learning the very basics of Solana Core Programming.
+
+## Chapter 2: On-Hands Introduction to Seahorse Lang: Counter App
+In this chapter we will learn how to build a Counter App, and use Program Derived Addresses (PDAs) to do so. The program is similar to the above, but the use of PDAs opens up a new paradigm to the learners which is crucial for Solana Programming.
+
+## [Coming Soon] Chapter 3: On-Hands Introduction to Seahorse Lang: Escrow App
+
+## Chapter 4 [optional]: Introduction to Solana Core
 This chapter contains a glossary of important topics/words that readers should ideally know before proceeding to chapter 1.
 - **Primer on Blockchain and Solana**
     - Intro to blockchain
@@ -36,51 +46,3 @@ This chapter contains a glossary of important topics/words that readers should i
     - Fungible Tokens
     - Fungible assets
     - Non-Fungible tokens (NFTs)
-- **Data**
-    - Common Types
-    - Serialization/Deserialization
-- **Cross-Program Invocation**
-
-## Chapter 1: On-Hands Introduction to Seahorse Lang
-This Chapter will go through the processes of Writing Programs using Seahorse and testing them with prebuilt frontends in TypeScript ( I will be briefly taking the users over making 1-2 frontends and providing relevant links to learn react). This will enable readers to focus their attention on learning how to write and test Seahorse programs. The difficulty and technical complexity of the programs will increase incrementally.
-
-- What is SeaHorse lang?
-- Installation
-    - Dependencies
-    - SeaHorse installation
-- SeaHorse CLI
-
- 
-
-Here are the programs that I will demo from scratch during this course:
-
-1. Poll
-2. Counter
-3. Escrow
-4. Cold to Hot Wallet Delegation
-5. Token Minting and Trasfer
-6. Solana Twitter Program
-
-Each of the above will comprise of the following:
-
-- Writing the Program
-    - Adding Accounts
-    - Adding Instructions
-    - Modularising programs
-    - Testing program on Solana Playground
-- Frontend
-    - Initialise react app
-    - Make frontend
-    - Call program
-    - Testing: [https://beta.solpg.io/](https://beta.solpg.io/)
-
-## Chapter 2: Diving deep into Seahorse Lang
-
-- Limitations
-- Seahorse Prelude
-- Python constructs and built-ins
-- Scripts vs Modules
-- Directives
-
-## Chapter 3 [optional]: Testing with Anchor
-This Chapter will cover the depths of testing your Seahorse Programs!
