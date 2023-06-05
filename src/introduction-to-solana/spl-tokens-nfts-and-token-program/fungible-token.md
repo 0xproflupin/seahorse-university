@@ -17,6 +17,6 @@ What sets the SPL-tokens apart are their characteristic of having:
 
 We can see an example of such a token on Solscan as well. Lets check out [DUST Protocol](https://solscan.io/token/DUSTawucrTsGU8hcqRdHDCbuYhCPADMLM2VcCb8VnFnQ), which is a Fungible token on Solana.
 
-![dust protocol](https://cdn.hashnode.com/res/hashnode/image/upload/v1665560084716/_wNdfxdpK.png align="left")
+![description](images/token1.png)
 
 On the **Profile Summary**, we can see the token's name and address. We can also see that this account is owned by the **Token Program**, indicating that this is a Mint Account. Furthermore, we can see the `authority` of the token as well as the number of decimal places. On the **Market Overview**, we can see the supply which is &gt; 1. The supply and decimal combination shows that the given token is a Fungible token.

@@ -8,7 +8,7 @@ Open `poll.py` and you will see this:
 
 - Firstly, replace all instaces of "FizzBuzz" from the file and replace it with "Poll"
 - Also remove everything after line 11. Your `poll.py` should look like this: 
-```
+```py
 
 # Poll
 # Built with Seahorse v0.2.4
@@ -23,7 +23,7 @@ declare_id('11111111111111111111111111111111')
 
 ```
 
-We will discuss what `declare_id` does when we discuss `Programs`. But essentially, the program address is declared within the `declare_id`. More on it later.
+We will discuss what `declare_id` does when we discuss `Programs`. But essentially, the program address is declared within the `declare_id`. More on it in the next program.
 
 In Seahorse, accounts are represented by classes derived from the `Account` base class. 
 Let's add a `Poll` account to the `poll.py` file which will represent the poll state.

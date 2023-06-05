@@ -1,6 +1,6 @@
 # Blocks, Validators and Proof of History:
 
-![blockchain](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eew1z489grqv0o9t6i7h.jpeg align="left")
+![description](images/poh1.jpeg)
 
 Without going into the depths of the jargon ocean, a blockchain is simply a digitally distributed database. The key difference between a typical database and a blockchain is how the stored data is structured.
 
@@ -10,7 +10,7 @@ In the case of Solana, when a node claims to have created a block, the other nod
 
 How does this validation, or consensus work on Solana? The answer is something called **Proof of History (PoH)**
 
-![vdf](https://cdn.hashnode.com/res/hashnode/image/upload/v1665563303831/hBJ5wyvJ8.png align="left")
+![description](images/poh2.png)
 
 > *"Proof of History is exactly what the name suggests: a proof of historical events*", Anatoly Yakovenko.
 
@@ -20,7 +20,7 @@ How does this validation, or consensus work on Solana? The answer is something c
 
 Coming back to how **Validators** prove that the **Leader** node is the node that generated the block: the **Validators** run the above **PoH VDF** on a number of transactions existing on the block to be verified. The outputs of the VDF are then compared with the outputs provided by the **Leader** node. Once proven, the Leader is then confirmed to have created the block and rewards for validation are distributed to all the validators, including the Leader.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/egcwo3s9emyxcjrids37.png align="left")
+![description](images/poh3.png)
 
 In the above view of a given block #154616344, we can see a variety of information.
 
@@ -37,6 +37,6 @@ In the above view of a given block #154616344, we can see a variety of informati
 
 Now, if you click on one of the hashes in the **By** column of the **Transactions** section, we land on a page which gives a detailed overview of the Account with hash [GFDmfhoPtZZATNxw8zyZPVYKkBZutf1zoZTbRbxDjh5E](https://solscan.io/account/GFDmfhoPtZZATNxw8zyZPVYKkBZutf1zoZTbRbxDjh5E).
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/96rdkpxvrpjibrfcfbjl.png align="left")
+![description](images/poh4.png)
 
 Let us first go through some theory and after which we can truly understand the account page and all its components.

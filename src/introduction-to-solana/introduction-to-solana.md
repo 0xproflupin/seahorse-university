@@ -1,4 +1,4 @@
-# Introduction to Solana Core
+# Introduction to Solana
 
 This tutorial is meant to be for a spectrum of readers:
 

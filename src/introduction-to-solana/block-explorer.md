@@ -15,7 +15,7 @@ Solana has several block explorers to choose from:
 * [SolanaFM](https://solana.fm/)
     
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r0f8va8pja9jgw1xnu95.png align="left")
+![description](images/block1.png)
 
 Throughout the tutorial, we'll see examples right from the block explorers that juxtapose the theory we discuss. Here are some of the words you'll see often throughout the tutorial:
 

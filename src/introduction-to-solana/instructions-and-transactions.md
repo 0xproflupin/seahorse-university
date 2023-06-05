@@ -24,7 +24,7 @@ One of more of such instructions are then bundled to form the transaction which 
 
 While we are talking about transactions, it's important to also talk about the Transactions per Second (TPS) of the network. Solana is famed to have one of the highest TPS of any chain.
 
-![vote vs non-vote](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e4ufaye8c35728abg1j8.png align="left")
+![description](images/ix1.png)
 
 There are two types of transactions **Vote** and **Non-Vote** transactions. Vote transactions are used to do the network validation as described in the Proof of History section and hence are not the "true" transactions being utilised for doing the actual work like transferring NFTs / tokens, bidding, selling etc. The graph above shows that in the last 7 days, the number of Vote transactions are almost 7 times as much as the Non-Vote transactions. This plays into the true **TPS (Transactions per Second)** debate of Solana: although Solana is blazingly fast with reported TPS touching averaging &gt;3k, the true TPS (removing transactions for Voting) is &lt;1.5K.
 

@@ -2,20 +2,20 @@
 
 We will initialise the project using the seahorse CLI:
 ```
-seahorse init poll
+seahorse init counter
 ```
 
-This will create a directory `poll` which will contain a bunch of directories and files with the following structure:
+This will create a directory `counter` which will contain a bunch of directories and files with the following structure:
 
 ```
-poll
+counter
 |\_ app
 |\_ migrations
 |\_ node_modules
 |\_ programs
 |\_ programs_py
     |\_ seahorse
-    |\_ poll.py
+    |\_ counter.py
     :
 |\_ target
 |\_ tests
@@ -29,10 +29,10 @@ poll
 
 Now let's build our seahorse project:
 ```
-cd poll
+cd counter
 seahorse build
 ```
 
-This should take some time for the first time, but now you'll notice some generated code in `programs/calculator/src/lib.rs` which is the Rust artificat of the code in `programs_py/poll.py`.
+This should take some time for the first time, but now you'll notice some generated code in `programs/counter/src/lib.rs` which is the Rust artificat of the code in `programs_py/counter.py`.
 
-Let's focus on `poll.py` file in `programs_py` and edit it to build our program.
+Let's focus on `counter.py` file in `programs_py` and edit it to build our program.

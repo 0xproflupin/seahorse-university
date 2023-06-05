@@ -1,4 +1,5 @@
 # Seahorse Installation
+Before we can start, we need to install some dependancies, including Seahorse.
 
 ## Rust
 Language which is used to code Solana programs.

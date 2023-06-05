@@ -12,13 +12,13 @@ To enhance Mint Accounts with additional metadata, the Metadata program uses a c
 
 > An ingenious solution to this is PDAs. PDAs envelop accounts that can be programmatically controlled by certain programs. This allows programs to sign on behalf of these accounts without requiring a private key, as shown below.
 
-> ![PDAs](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/beq9tz6ed33ohrhm9plb.png align="left")
+![description](images/metadata1.png)
 
 > PDAs are deterministically derived from a `program_id` and a string (also known as seeds) like `"auction_house"` or `"token_metadata"`. If you want to dive deep into how PDAs are generated, I highly recommend reading [Solana Cookbook's PDA guide](https://solanacookbook.com/core-concepts/pdas.html#generating-pdas).
 
 To attach additional data to a Mint Account, the Token Metadata Program derives a PDA from the Mint Account’s address. This PDA is then used to store a **Metadata Account** with the **Mint Account** using a PDA as shown below.
 
-![token metadata program](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z0ss6xd0vsrl3wrqvoub.png align="left")
+![description](images/metadata2.png)
 
 A Metadata account stores lots of useful information that Mint Accounts could not provide. This account also has a `URI` field which points to an off-chain JSON object. This object saves information like the image and attributes for an NFT.
 
@@ -29,4 +29,4 @@ The combination of the `Token Program` and the `Token Metadata Program` allows t
 2. `decimal places`: the number of decimals points a token is allowed to have. For example: SOL is allowed to have 9 decimal points, which means, 10^-9 SOL is a valid denomination and can be transferred between wallets.
     
 
-![different types of tokens](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f3016473mth2upuedzom.png align="left")
+![description](images/metadata3.png)
