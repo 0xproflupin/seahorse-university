@@ -91,6 +91,7 @@ const Content = () => {
       setPoll(fetchedAccounts[0]);
     }
     fetchPoll();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   useEffect(() => {
