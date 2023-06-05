@@ -1,7 +1,7 @@
 # Add Accounts
 > As mentioned in the [accounts section](../introduction-to-solana-core/accounts.md), decentralised apps need to track the current state: number of tokens, NFTs transferred, current highest bidder in an auction, orders for a token on a dex etc. These states need to be saved in data storing units on-chain, called `accounts`.
 
-As you'd have imagined already, we will have to store the state of the poll at a given time somewhere. To store this state, we will create and use an account.
+As you'd have imagined already, we will have to store the state, ie, the number of votes for each candidate of the poll at a given time somewhere. To store this state, we will create and use an account. Accounts are data storing units in Solana. We will explore them more throughout this course.
 
 Open `programs_py/poll.py` and you will see this:
 ```

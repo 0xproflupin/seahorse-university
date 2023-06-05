@@ -13,7 +13,7 @@ use anchor_spl::{
 use dot::program::*;
 use std::{cell::RefCell, rc::Rc};
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("5MgjVvaSLj6zmxuYhSST1M4LBiXoiSMrJPDZTRPQoiw8");
 
 pub mod seahorse_util {
     use super::*;
@@ -148,4 +148,66 @@ mod poll {
     use super::*;
     use seahorse_util::*;
     use std::collections::HashMap;
+
+    #[derive(Accounts)]
+    # [instruction (vote_op : String)]
+    pub struct Vote<'info> {
+        #[account(mut)]
+        pub user: Signer<'info>,
+        #[account(mut)]
+        pub poll: Box<Account<'info, dot::program::Poll>>,
+    }
+
+    pub fn vote(ctx: Context<Vote>, vote_op: String) -> Result<()> {
+        let mut programs = HashMap::new();
+        let programs_map = ProgramsMap(programs);
+        let user = SeahorseSigner {
+            account: &ctx.accounts.user,
+            programs: &programs_map,
+        };
+
+        let poll = dot::program::Poll::load(&mut ctx.accounts.poll, &programs_map);
+
+        vote_handler(user.clone(), poll.clone(), vote_op);
+
+        dot::program::Poll::store(poll);
+
+        return Ok(());
+    }
+
+    #[derive(Accounts)]
+    pub struct Create<'info> {
+        # [account (init , space = std :: mem :: size_of :: < dot :: program :: Poll > () + 8 , payer = user)]
+        pub poll: Box<Account<'info, dot::program::Poll>>,
+        #[account(mut)]
+        pub user: Signer<'info>,
+        pub rent: Sysvar<'info, Rent>,
+        pub system_program: Program<'info, System>,
+    }
+
+    pub fn create(ctx: Context<Create>) -> Result<()> {
+        let mut programs = HashMap::new();
+
+        programs.insert(
+            "system_program",
+            ctx.accounts.system_program.to_account_info(),
+        );
+
+        let programs_map = ProgramsMap(programs);
+        let poll = Empty {
+            account: dot::program::Poll::load(&mut ctx.accounts.poll, &programs_map),
+            bump: ctx.bumps.get("poll").map(|bump| *bump),
+        };
+
+        let user = SeahorseSigner {
+            account: &ctx.accounts.user,
+            programs: &programs_map,
+        };
+
+        create_handler(poll.clone(), user.clone());
+
+        dot::program::Poll::store(poll.account);
+
+        return Ok(());
+    }
 }

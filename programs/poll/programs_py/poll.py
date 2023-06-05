@@ -12,22 +12,18 @@ class Poll(Account):
   solana: u64
   polygon: u64
 
-class VoteOperation(Enum):
-  ETH = 0
-  SOL = 1
-  POL = 2
-
 @instruction
 def create(poll: Empty[Poll], user: Signer):
-    poll = poll.init(
-        payer=user
-    )
+  poll = poll.init(
+    payer=user
+  )
 
+# vote_op can be an enum too, but its broken on solpg
 @instruction
-def vote(user: Signer, poll: Poll, vote_op: VoteOperation):
-    if vote_op == VoteOperation.ETH:
-      poll.ethereum += 1
-    elif vote_op == VoteOperation.SOL:
-      poll.solana += 1
-    elif vote_op == VoteOperation.POL:
-      poll.polygon += 1
+def vote(user: Signer, poll: Poll, vote_op: str):
+  if vote_op == "eth":
+    poll.ethereum += 1
+  elif vote_op == "sol":
+    poll.solana += 1
+  elif vote_op == "pol":
+    poll.polygon += 1

@@ -1,25 +1,19 @@
-# Getting Started with Seahorse
+# Seahorse Installation
 
-> The ease of Python with the safety of Rust.
-
-Seahorse lang lets you write Solana programs in Python. Developers gain Python's ease-of-use, while still having the same safety guarantees of every Rust program on the Solana chain. Low-level memory problems are handled by default, letting you worry about the important stuff.
-
-## Installation
-
-### Rust
+## Rust
 Language which is used to code Solana programs.
 Go [here](https://www.rust-lang.org/tools/install) to install Rust.
 
-### Solana Toolkit
+## Solana Toolkit
 Go here to install Solana and then run `solana-keygen new` to create a Solana keypair/wallet at the default location. This wallet will be used later for testing our Seahorse programs.
 
-### Node.js
+## Node.js
 Node.js can be installed by visiting [here](https://nodejs.org/en/download).
 
-### Yarn
+## Yarn
 Go [here](https://yarnpkg.com/getting-started/install) to install Yarn.
 
-### Anchor
+## Anchor
 Install `avm` using Cargo. Note this will replace your `anchor` binary if you had one installed.
 ```
 cargo install --git https://github.com/project-serum/anchor avm --locked --force
@@ -41,11 +35,11 @@ Verify the installation.
 anchor --version
 ```
 
-### Rustfmt
+## Rustfmt
 Seahorse uses rustfmt to help generate better-looking Rust code.
 Installation instructions [here](https://github.com/rust-lang/rustfmt).
 
-### Seahorse
+## Seahorse
 Cargo install the `seahorse` binary:
 ```
 cargo install seahorse-lang
@@ -56,4 +50,4 @@ Verify the installation.
 seahorse -V
 ```
 
-Now that we've gone past the boring stuff, lets get started with coding our first Solana Program using Seahorse!
+Now that we've gone past the boring stuff, lets get started with coding our second Solana Program using Seahorse!

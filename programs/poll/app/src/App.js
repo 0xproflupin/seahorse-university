@@ -22,7 +22,7 @@ import idl from "./idl.json";
 
 const programID = new PublicKey("5MgjVvaSLj6zmxuYhSST1M4LBiXoiSMrJPDZTRPQoiw8");
 const network =
-  "https://rpc-devnet.helius.xyz/?api-key=7f4fa7e5-09f2-4f01-a440-8938c172c52f";
+  `https://rpc-devnet.hellomoon.io/${process.env.REACT_APP_HELLOMOON_API}`;
 const opts = {
   preflightCommitment: "processed",
 };
@@ -149,11 +149,11 @@ const Content = () => {
     }
     let vote = {};
     if (candidate === 0) {
-      vote = { eth: true };
+      vote = "eth";
     } else if (candidate === 1) {
-      vote = { sol: true };
+      vote = "sol";
     } else if (candidate === 2) {
-      vote = { pol: true };
+      vote = "pol";
     }
     await program.methods
       .vote(vote)
@@ -188,6 +188,9 @@ const Content = () => {
           <h1>Seahorse Poll App</h1>
           <h3>Vote for your favorite blockchain</h3>
           <h2>Ethereum: {votes.ethereum} | Solana: {votes.solana} | Polygon: {votes.polygon}</h2>
+          <button onClick={() => createPoll()}>
+            Create New Poll
+          </button>
           <button onClick={() => vote(0)}>
             Vote Ethereum
           </button>
