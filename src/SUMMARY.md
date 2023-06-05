@@ -22,6 +22,7 @@
     - [Voting Functionality](./poll-app/frontend/voting-functionality.md)
     - [Context and Content Components](./poll-app/frontend/context-and-content.md)
     - [Rendering the UI](./poll-app/frontend/rendering-the-ui.md)
+    - [Build and Run the App](./poll-app/frontend/build-and-run.md)
 
 - [Counter App](./counter-app/counter-app.md)
   - [Seahorse Installation](./counter-app/seahorse-installation.md)

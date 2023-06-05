@@ -5,7 +5,7 @@ In this section, we will go through building a frontend for the Solana Poll Dapp
 ## Initialise React App
 
 - Install Node.js and npm using the following guide:
-https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+[https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 We will use CRA (Create-React-App) to quickly bootstrap our ReactJS application.
 
