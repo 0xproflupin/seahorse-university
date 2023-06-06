@@ -150,31 +150,6 @@ mod counter {
     use std::collections::HashMap;
 
     #[derive(Accounts)]
-    pub struct Decrement<'info> {
-        #[account(mut)]
-        pub user: Signer<'info>,
-        #[account(mut)]
-        pub counter: Box<Account<'info, dot::program::Counter>>,
-    }
-
-    pub fn decrement(ctx: Context<Decrement>) -> Result<()> {
-        let mut programs = HashMap::new();
-        let programs_map = ProgramsMap(programs);
-        let user = SeahorseSigner {
-            account: &ctx.accounts.user,
-            programs: &programs_map,
-        };
-
-        let counter = dot::program::Counter::load(&mut ctx.accounts.counter, &programs_map);
-
-        decrement_handler(user.clone(), counter.clone());
-
-        dot::program::Counter::store(counter);
-
-        return Ok(());
-    }
-
-    #[derive(Accounts)]
     pub struct Reset<'info> {
         #[account(mut)]
         pub user: Signer<'info>,
@@ -200,7 +175,31 @@ mod counter {
     }
 
     #[derive(Accounts)]
-    # [instruction (counter_bump : u8)]
+    pub struct Decrement<'info> {
+        #[account(mut)]
+        pub user: Signer<'info>,
+        #[account(mut)]
+        pub counter: Box<Account<'info, dot::program::Counter>>,
+    }
+
+    pub fn decrement(ctx: Context<Decrement>) -> Result<()> {
+        let mut programs = HashMap::new();
+        let programs_map = ProgramsMap(programs);
+        let user = SeahorseSigner {
+            account: &ctx.accounts.user,
+            programs: &programs_map,
+        };
+
+        let counter = dot::program::Counter::load(&mut ctx.accounts.counter, &programs_map);
+
+        decrement_handler(user.clone(), counter.clone());
+
+        dot::program::Counter::store(counter);
+
+        return Ok(());
+    }
+
+    #[derive(Accounts)]
     pub struct Create<'info> {
         # [account (init , space = std :: mem :: size_of :: < dot :: program :: Counter > () + 8 , payer = user , seeds = ["counter" . as_bytes () . as_ref () , user . key () . as_ref ()] , bump)]
         pub counter: Box<Account<'info, dot::program::Counter>>,
@@ -210,7 +209,7 @@ mod counter {
         pub rent: Sysvar<'info, Rent>,
     }
 
-    pub fn create(ctx: Context<Create>, counter_bump: u8) -> Result<()> {
+    pub fn create(ctx: Context<Create>) -> Result<()> {
         let mut programs = HashMap::new();
 
         programs.insert(
@@ -229,7 +228,7 @@ mod counter {
             programs: &programs_map,
         };
 
-        create_handler(counter.clone(), user.clone(), counter_bump);
+        create_handler(counter.clone(), user.clone());
 
         dot::program::Counter::store(counter.account);
 

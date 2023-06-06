@@ -30,6 +30,7 @@
   - [Write Program](./counter-app/write-the-program/write-the-program.md)
     - [Add Accounts](./counter-app/write-the-program/add-accounts.md)
     - [Add Instructions](./counter-app/write-the-program/add-instructions.md)
+  - [Build the Program](./counter-app/build-the-program.md)
 
 - [Introduction to Solana](./introduction-to-solana/introduction-to-solana.md)
   - [Block Explorer](./introduction-to-solana/block-explorer.md)

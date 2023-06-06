@@ -14,7 +14,7 @@ Developers gain Python's ease-of-use, while still having the same safety guarant
 ## What you'll learn
 - [x] Gain an immersive understanding of the Solana account model
 - [x] Understand how to write Solana programs using Python and Seahorse lang
-- [x] Learn how to make full-stack decentralised applications using Python and Typescript
+- [x] Learn how to make full-stack decentralised applications using Python and Javascript
 - [x] Learn the very basics of Anchor and Rust using Seahorse lang
 
 ## Prerequisites

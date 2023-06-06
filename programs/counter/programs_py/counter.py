@@ -8,11 +8,10 @@ declare_id('C8ZXZXQuCKidMC1bjQduPjvSmkZqTBXukZbVxmGc9JAR')
 
 class Counter(Account):
     count: u64
-    bump: u8
     user: Pubkey
 
 @instruction
-def create(counter: Empty[Counter], user: Signer, counter_bump: u8):
+def create(counter: Empty[Counter], user: Signer):
     counter = counter.init(
         payer=user,
         seeds=["counter", user]

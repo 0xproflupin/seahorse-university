@@ -24,9 +24,9 @@ Poll
 
 - `src/fizzbuzz.py` currently contains a boilerplate starter program written in Seahorse Lang. We can already see the structure that a Seahorse program follows, but we'll come to that later.
 
-- `client/client.ts` can host Typescript code that can be used to simulate actual frontend user experience of your app. In this file, we can add code to simulate the interaction of our frontend with our program.
+- `client/client.ts` can host Javascript code that can be used to simulate actual frontend user experience of your app. In this file, we can add code to simulate the interaction of our frontend with our program.
 
-- `tests/seahorse.test.ts` will contain our Anchor Unit Tests written in Typescript. This goes a level deeper than `client.ts` and is essential to check if our Program is functional and working as expected or not.
+- `tests/seahorse.test.ts` will contain our Anchor Unit Tests written in Javascript. This goes a level deeper than `client.ts` and is essential to check if our Program is functional and working as expected or not.
 
 - There are three more tabs: Build & Deploy, Test and Tutorials. We'll come back to them while testing and deploying our program
 
