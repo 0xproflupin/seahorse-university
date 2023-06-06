@@ -20,3 +20,16 @@ Developers gain Python's ease-of-use, while still having the same safety guarant
 ## Prerequisites
 * Python programming skills
 * Basics knowledge of Blockchain technology
+
+## Codebase
+The code for the programs as well as this Markdown Book (mdbook) can be found here:
+
+#### [https://github.com/0xproflupin/seahorse-university](https://github.com/0xproflupin/seahorse-university)
+
+In case of any questions, please feel free to reach to me:
+#### Twitter: [https://twitter.com/0xAnvit](https://twitter.com/0xAnvit)
+
+## Programs
+Programs are hosted and can be found here:
+1. **Poll**: [https://poll.seahorse.university/](https://poll.seahorse.university/)
+2. **Counter**: [https://counter.seahorse.university/](https://counter.seahorse.university/)
