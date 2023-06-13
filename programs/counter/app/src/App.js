@@ -24,7 +24,7 @@ import idl from "./idl.json";
 // const programID = new PublicKey("DTWbi1MaDqinPBJF4JZ7mVHgFfoSeD51VruTG7ud41Ec");
 const programID = new PublicKey("C8ZXZXQuCKidMC1bjQduPjvSmkZqTBXukZbVxmGc9JAR");
 const network =
-  `https://rpc-devnet.hellomoon.io/${process.env.REACT_APP_HELLOMOON_API}`;
+  `https://rpc-devnet.helius.xyz/?api-key=${process.env.REACT_APP_HELIUS_API}`;
 const opts = {
   preflightCommitment: "processed",
 };
