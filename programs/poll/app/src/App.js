@@ -285,7 +285,7 @@ const Content = () => {
           <button onClick={() => createPoll()}>
             Create New Poll
           </button>
-          <h3>Enter the number of nonces you require</h3>
+          <h3>Enter the number of votes you want to give</h3>
           <input 
             type="text"
             value={enteredNumber}
@@ -294,7 +294,7 @@ const Content = () => {
           <button onClick={() => createNonces(enteredNumber)}>
             Create Nonces
           </button>
-          <p></p>
+          <h3>Vote for your favorite blockchain</h3>
           <button onClick={() => vote(0)}>
             Vote Ethereum
           </button>
