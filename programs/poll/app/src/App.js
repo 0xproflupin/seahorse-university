@@ -242,12 +242,22 @@ const Content = () => {
     const { data } = await supabase
       .from('durableTransactions')
       .select('transaction')
-      .eq('pollId', poll);
+      .eq('pollId', poll.toString());
 
     for (const txObj of data) {
       const tx = bs58.decode(txObj.transaction);
       const sig = await sendAndConfirmRawTransaction(connection, tx);
       console.log("Sent durable transaction: ", sig);
+    }
+
+    const { error } = await supabase
+      .from('durableTransactions')
+      .delete()
+      .eq('pollId', poll.toString());
+    if (error) {
+      console.log("error while deleting txs from supabase");
+    } else {
+      console.log(`successfully deleted txs for poll: ${poll.toString()}`)
     }
     const pollAccount = await program.account.poll.fetch(poll);
     setVotes({
