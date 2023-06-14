@@ -40,12 +40,7 @@ const opts = {
 const supabase = createClient('https://jduhbkqikqrairwvksmu.supabase.co', process.env.REACT_APP_SUPABASE_KEY)
 
 const nonceAuthKP = Keypair.fromSecretKey(
-  Uint8Array.from([
-    152,85,82,57,118,154,160,122,133,227,18,227,56,109,149,232,186,151,74,169,
-    228,10,31,157,102,58,130,12,159,2,69,144,114,213,143,146,242,145,207,157,
-    117,231,235,172,43,117,83,17,198,234,122,59,237,145,56,227,62,131,168,110,
-    109,57,5,40
-  ])
+  bs58.decode(process.env.REACT_APP_AUTH_KEYPAIR)
 );
 
 export const getProvider = (wallet) => {
