@@ -43,7 +43,7 @@ Installation instructions [here](https://github.com/rust-lang/rustfmt).
 ## Seahorse
 Cargo install the `seahorse` binary:
 ```
-cargo install seahorse-lang
+cargo install seahorse-dev
 ```
 
 Verify the installation.

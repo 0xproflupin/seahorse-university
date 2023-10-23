@@ -2,7 +2,7 @@
 
 ## Building our Program
 
-Now that we have written our program, we need to convert the Seahorse program, written in Python and convert it into an Anchor program written in Rust. We won't go into the inner mechanisms of how this happens, but if you want to delve deep into it, read up the [Seahorse Compiler Overview](https://github.com/ameliatastic/seahorse-lang/blob/main/src/core/README.md).
+Now that we have written our program, we need to convert the Seahorse program, written in Python and convert it into an Anchor program written in Rust. We won't go into the inner mechanisms of how this happens, but if you want to delve deep into it, read up the [Seahorse Compiler Overview](https://github.com/solana-developers/seahorse/tree/main/src/core).
 
 - On Solana Playground, press Cmd + Shift + B, or press the Build and Deploy icon on the sidebar.
 
