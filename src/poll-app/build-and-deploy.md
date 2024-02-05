@@ -42,7 +42,7 @@ The final step is to initialise and Export our IDL.
 > This helps indexers in parsing data and other applications showing our Poll States in nice UIs. This is another contributing factor to Solana's "composability", which means that applications can be built upon each other and interact with each other with ease!
 
 - For example, visit: https://solscan.io/account/5MgjVvaSLj6zmxuYhSST1M4LBiXoiSMrJPDZTRPQoiw8?cluster=devnet#anchorProgramIDL
-Here we can see the different Instructions and Accounts are programs owns. 
+Here we can see the different Instructions and Accounts the program owns. 
 
 ![build5](images/build5.png)
 ![build6](images/build6.png)
