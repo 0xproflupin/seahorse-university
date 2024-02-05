@@ -5,7 +5,7 @@ To make instances of polls, and write/modify the data stored in these polls, we 
 
 ## Initialising Poll
 
-Instructions in Seahorse are written using functions with the `@instruction` decorator. Let's add a `create_poll` instruction to our program:
+Instructions in Seahorse are written using functions with the `@instruction` decorator. Let's add a `create` instruction to our program:
 
 ```py
 
@@ -22,7 +22,7 @@ class Poll(Account):
 @instruction
 def create(poll: Empty[Poll], user: Signer):
     poll = poll.init(
-        payer=user
+        payer=user, seeds = ['poll', user]
     )
 
 ```
@@ -30,7 +30,7 @@ def create(poll: Empty[Poll], user: Signer):
 From the first look, this may seem a little weird if you've never seen a statically typed language before like TypeScript.
 
 ```py
-def create_poll(poll: Empty[Poll], user: Signer)
+def create(poll: Empty[Poll], user: Signer)
 ```
 
 - In Python, it is not necessary to declare the type of variables, but in Seahorse its necessary to do so to determine at compile time what account type does the variable belong to.
@@ -41,7 +41,7 @@ def create_poll(poll: Empty[Poll], user: Signer)
 
 ```py
 poll = poll.init(
-  payer=user
+  payer=user, seeds = ['poll', user]
 )
 ```
 
@@ -78,7 +78,7 @@ We add the following as instruction parameters:
 
 > For the already-trained in Anchor, the above might look strange as we are essentially adding accounts and other data as instruction parameters together. This is way simpler than Anchor where data and accounts have to be handled differently.
 
-- Like `Empty`, `Signer` is also an in-built account type available in Seahorse. In any blockchain, users need to sign the transactions to modify state of accounts (write/modify data). In our case as well, for a user to vote for their favorite chain and hence change the state of the account, they will have to sign a transaction. `Signer` represents the type of account `user` which will sign the transaction which will contain given intruction (`create_poll`).
+- Like `Empty`, `Signer` is also an in-built account type available in Seahorse. In any blockchain, users need to sign the transactions to modify state of accounts (write/modify data). In our case as well, for a user to vote for their favorite chain and hence change the state of the account, they will have to sign a transaction. `Signer` represents the type of account `user` which will sign the transaction which will contain given instruction (`create`).
 
 - The rest of the instruction is pretty straight-forward as we are simply incrementing the dedicated chain fields in the `poll` account depending on the type of `vote_op` provided.
 
@@ -107,7 +107,7 @@ class Poll(Account):
 @instruction
 def create(poll: Empty[Poll], user: Signer):
     poll = poll.init(
-        payer=user
+        payer=user, seeds = ['poll', user]
     )
 
 @instruction
@@ -118,6 +118,8 @@ def vote(user: Signer, poll: Poll, vote_op: str):
         poll.solana += 1
     elif vote_op == "pol":
         poll.polygon += 1
+    else:
+        print("Candidate does not exist")
 
 ```
 
